@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>전공 선택 도우미 | 전공 비교</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="compare.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-badge">Major</span>
+      <strong>Choice</strong>
+    </div>
+
+    <nav class="topnav">
+      <a class="toplink" href="index.html">Dashboard</a>
+      <a class="toplink" href="compare.html"><b>Compare</b></a>
+      <a class="toplink" href="test.html">Test</a>
+      <a class="toplink" href="roadmap.html">Roadmap</a>
+      <a class="toplink" href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="btn ghost" onclick="location.href='index.html'">Back</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-title">전공 비교</div>
+
+      <a class="side-item" href="index.html">Home</a>
+      <a class="side-item active" href="compare.html">전공 비교</a>
+      <a class="side-item" href="test.html">성향 테스트</a>
+      <a class="side-item" href="roadmap.html">로드맵</a>
+      <a class="side-item" href="faq.html">FAQ</a>
+
+      <div class="side-section">
+        <div class="side-subtitle">읽는 방법</div>
+        <p class="muted" style="margin:0 8px">
+          아래 비교는 “키워드”보다<br />
+          <b>학습 영역·역량·진출 직무</b> 중심으로 정리했습니다.<br /><br />
+          각 섹션은 클릭하여 펼칠 수 있습니다.
+        </p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="breadcrumb">Dashboard  ›  <b>Compare</b></div>
+
+      <div class="page-head">
+        <h1>컴퓨터공학과 vs 융합보안학과</h1>
+        <div class="muted">학생들이 “전공에서 실제로 무엇을 배우는지”를 이해할 수 있도록 상세 비교합니다.</div>
+      </div>
+
+      <!-- 상단 요약 카드 -->
+      <div class="grid kpi" style="grid-template-columns: repeat(3, 1fr);">
+        <article class="card">
+          <div class="card-label">핵심 관점</div>
+          <div class="card-value" style="font-size:18px">무엇을 하게 되나</div>
+          <div class="card-hint">학습 영역, 역량, 실습을 중심으로 비교</div>
+        </article>
+        <article class="card">
+          <div class="card-label">컴퓨터공학과 한 줄</div>
+          <div class="card-value" style="font-size:18px">“만드는 능력” 강화</div>
+          <div class="card-hint">SW/서비스 구현, 문제 해결, 시스템 설계</div>
+        </article>
+        <article class="card">
+          <div class="card-label">융합보안학과 한 줄</div>
+          <div class="card-value" style="font-size:18px">“지키는/분석” 강화</div>
+          <div class="card-hint">취약점/위협 분석, 사고 대응, 리스크 관리</div>
+        </article>
+      </div>
+
+      <!-- 전공별 상세 카드 (좌/우 비교) -->
+      <div class="grid two compare-wide" style="margin-top:14px">
+
+        <!-- 컴퓨터공학과 -->
+        <article class="card">
+          <div class="card-title">컴퓨터공학과 (Computer Engineering / CS 중심)</div>
+          <div class="chip-row" style="margin-bottom:10px">
+            <div class="chip">개발·구현</div>
+            <div class="chip">알고리즘</div>
+            <div class="chip">시스템/DB</div>
+            <div class="chip">소프트웨어 설계</div>
+          </div>
+
+          <div class="acc">
+            <button class="acc-q">무엇을 배우나요?</button>
+            <div class="acc-a">
+              <ul class="list">
+                <li><b>프로그래밍 기초</b>: 문법/코드 구조/디버깅 습관</li>
+                <li><b>자료구조·알고리즘</b>: 효율적으로 문제를 푸는 사고(시간/공간 복잡도)</li>
+                <li><b>컴퓨터 시스템</b>: 운영체제, 메모리, 프로세스, 스케줄링 같은 “컴퓨터 내부 동작”</li>
+                <li><b>DB/데이터 모델링</b>: 관계형 모델, SQL, 트랜잭션 개념(정합성)</li>
+                <li><b>소프트웨어 공학</b>: 요구사항→설계→구현→테스트→협업(Git) 과정</li>
+              </ul>
+            </div>
+
+            <button class="acc-q">어떤 역량이 늘어나나요?</button>
+            <div class="acc-a">
+              <ul class="list">
+                <li><b>구현력</b>: 기능을 코드로 “완성”시키는 능력</li>
+                <li><b>문제 해결력</b>: 요구사항을 작은 단위로 쪼개고 로직을 설계하는 능력</li>
+                <li><b>확장·유지보수</b>: 구조를 깔끔하게 만들어 나중에 고치기 쉬운 코드 작성</li>
+                <li><b>협업 능력</b>: 버전관리(Git), 이슈/PR 기반 협업 흐름 이해</li>
+              </ul>
+            </div>
+
+            <button class="acc-q">대표 프로젝트/실습 예시</button>
+            <div class="acc-a">
+              <ul class="list">
+                <li>회원가입/로그인 UI(프론트) + CRUD 설계(개념)</li>
+                <li>DB 설계(ERD) → SQL로 테이블 구성 → 데이터 처리</li>
+                <li>간단한 웹 서비스(소개/테스트/대시보드) 구현</li>
+                <li>알고리즘 문제 풀이/코딩테스트 대비</li>
+              </ul>
+            </div>
+
+            <button class="acc-q">진출 직무와 실제 하는 일</button>
+            <div class="acc-a">
+              <ul class="list">
+                <li><b>백엔드</b>: API 설계, DB 연동, 서버 로직 구성</li>
+                <li><b>프론트엔드</b>: UI/UX 구현, 상태 관리, 성능 최적화</li>
+                <li><b>모바일/앱</b>: 앱 화면+기능 구현, 디바이스 특성 대응</li>
+                <li><b>데이터/ML 엔지니어링</b>: 데이터 파이프라인, 모델 서빙(상위 단계)</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- 융합보안학과 -->
+        <article class="card">
+          <div class="card-title">융합보안학과 (Security / Assurance 중심)</div>
+          <div class="chip-row" style="margin-bottom:10px">
+            <div class="chip">분석·탐지</div>
+            <div class="chip">네트워크/시스템</div>
+            <div class="chip">취약점/위협</div>
+            <div class="chip">정책·리스크</div>
+          </div>
+
+          <div class="acc">
+            <button class="acc-q">무엇을 배우나요?</button>
+            <div class="acc-a">
+              <ul class="list">
+                <li><b>네트워크 기초</b>: IP/TCP/HTTP 같은 통신 구조(웹이 “어떻게 오가는지”)</li>
+                <li><b>시스템/운영체제</b>: 권한, 계정, 프로세스, 로그, 파일 시스템 이해</li>
+                <li><b>보안 원리</b>: 인증/인가, 암호 기초 개념, 접근통제, 보안 설계</li>
+                <li><b>취약점 이해</b>: 웹 취약점(예: 입력 검증, 권한 문제) 같은 구조적 약점</li>
+                <li><b>거버넌스/정책</b>: 리스크 관리, 준수(컴플라이언스), 보안 운영 관점</li>
+              </ul>
+            </div>
+
+            <button class="acc-q">어떤 역량이 늘어나나요?</button>
+            <div class="acc-a">
+              <ul class="list">
+                <li><b>분석력</b>: “무슨 일이 일어났는지” 로그/흐름으로 재구성</li>
+                <li><b>예방 설계</b>: 시스템을 만들 때 보안 이슈가 생기지 않게 기준을 세움</li>
+                <li><b>리스크 관점</b>: 위험도를 평가하고 우선순위를 정하는 능력</li>
+                <li><b>커뮤니케이션</b>: 기술을 비기술자에게 설명하고 보고서로 정리</li>
+              </ul>
+            </div>
+
+            <button class="acc-q">대표 프로젝트/실습 예시</button>
+            <div class="acc-a">
+              <ul class="list">
+                <li>간단한 로그 분석 시나리오(이상 징후 탐지) 정리</li>
+                <li>웹 취약점 체크리스트 기반 점검(개념/시뮬레이션)</li>
+                <li>보안 사고 대응 절차(탐지→분석→조치→재발방지) 문서화</li>
+                <li>보안 정책/가이드라인 작성(사용자 권한/비밀번호 정책 등)</li>
+              </ul>
+            </div>
+
+            <button class="acc-q">진출 직무와 실제 하는 일</button>
+            <div class="acc-a">
+              <ul class="list">
+                <li><b>보안관제(SOC)</b>: 경보 분석, 위협 탐지, 대응 협업</li>
+                <li><b>침해사고 분석(IR)</b>: 사고 원인/범위 분석, 재발 방지 대책</li>
+                <li><b>보안 컨설팅</b>: 진단/개선안, 정책/프로세스 설계</li>
+                <li><b>보안 엔지니어</b>: 보안 시스템 운영, 설정/모니터링/개선</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 공통/겹치는 영역 -->
+      <article class="card" style="margin-top:14px">
+        <div class="card-title">공통으로 겹치는 영역 (둘 다 도움이 되는 기반)</div>
+        <div class="grid two">
+          <div class="card" style="box-shadow:none">
+            <div class="card-label">공통 기반</div>
+            <ul class="list">
+              <li>프로그래밍 기초(문법/디버깅 습관)</li>
+              <li>웹/네트워크 기본(HTTP, 요청/응답 흐름)</li>
+              <li>DB 기초(SQL, 데이터 모델링 개념)</li>
+              <li>협업(Git, 문서화)</li>
+            </ul>
+          </div>
+          <div class="card" style="box-shadow:none">
+            <div class="card-label">선택 기준 힌트</div>
+            <ul class="list">
+              <li><b>“서비스를 만들고 싶다”</b> → 컴공 성향이 더 강할 가능성</li>
+              <li><b>“사고를 막고 원인을 파고든다”</b> → 보안 성향이 더 강할 가능성</li>
+              <li>둘 다 끌리면 “직무(백엔드/IR/컨설팅)”를 먼저 정해도 좋음</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 다음 행동 -->
+      <article class="card" style="margin-top:14px">
+        <div class="card-title">다음으로 무엇을 하면 좋을까요?</div>
+        <div class="card-actions">
+          <button class="btn primary" onclick="location.href='test.html'">성향 테스트 다시 하기</button>
+          <button class="btn" onclick="location.href='roadmap.html'">로드맵 생성하기</button>
+          <button class="btn ghost" onclick="location.href='index.html'">대시보드 보기</button>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

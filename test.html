@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>전공 선택 도우미 | 성향 테스트</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="test.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-badge">Major</span>
+      <strong>Choice</strong>
+    </div>
+
+    <nav class="topnav">
+      <a class="toplink" href="compare.html">Compare</a>
+      <a class="toplink" href="test.html"><b>Test</b></a>
+      <a class="toplink" href="roadmap.html">Roadmap</a>
+      <a class="toplink" href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="btn ghost" onclick="location.href='index.html'">Back</button>
+      <button class="btn primary" id="btnSubmit">Finish</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-title">성향 테스트</div>
+
+      <a class="side-item" href="index.html">Home</a>
+      <a class="side-item" href="compare.html">전공 비교</a>
+      <a class="side-item active" href="test.html">성향 테스트</a>
+      <a class="side-item" href="roadmap.html">로드맵</a>
+      <a class="side-item" href="faq.html">FAQ</a>
+
+      <div class="side-section">
+        <div class="side-subtitle">Progress</div>
+        <div class="progress"><span id="progressBar" style="width:0%"></span></div>
+        <div class="muted" style="margin:10px 8px 0" id="progressText">0 / 12 answered</div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="breadcrumb">Dashboard  ›  <b>Test</b></div>
+      <div class="page-head">
+        <h1>성향 테스트</h1>
+        <div class="muted">각 문항을 1~5점으로 선택하세요 (1=전혀 아니다, 5=매우 그렇다)</div>
+      </div>
+
+      <article class="card">
+        <div class="card-title">Questions (12)</div>
+
+        <form id="testForm" class="grid" style="gap:12px">
+          <!-- JS에서 문항 렌더 -->
+        </form>
+
+        <div class="card-actions" style="justify-content:flex-end; margin-top:14px">
+          <button type="button" class="btn ghost" id="btnClear">Clear</button>
+          <button type="button" class="btn primary" id="btnCalc">Calculate</button>
+        </div>
+      </article>
+
+      <article class="card" id="resultCard" style="display:none; margin-top:14px">
+        <div class="card-title">Result</div>
+
+        <div class="grid kpi" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" style="box-shadow:none">
+            <div class="card-label">추천 전공</div>
+            <div class="card-value" id="resMajor">-</div>
+            <div class="card-hint" id="resReason">-</div>
+          </div>
+          <div class="card" style="box-shadow:none">
+            <div class="card-label">컴공(CE) 점수</div>
+            <div class="card-value" id="resCE">-</div>
+            <div class="progress"><span id="resBarCE" style="width:0%"></span></div>
+          </div>
+          <div class="card" style="box-shadow:none">
+            <div class="card-label">융합보안(SEC) 점수</div>
+            <div class="card-value" id="resSEC">-</div>
+            <div class="progress"><span id="resBarSEC" style="width:0%"></span></div>
+          </div>
+        </div>
+
+        <div class="chip-row" id="resTags" style="margin-top:12px"></div>
+
+        <div class="card-actions" style="justify-content:flex-end; margin-top:12px">
+          <button class="btn" type="button" onclick="location.href='compare.html'">Compare</button>
+          <button class="btn" type="button" onclick="location.href='roadmap.html'">Roadmap</button>
+          <button class="btn primary" type="button" id="btnSave">Save to Dashboard</button>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

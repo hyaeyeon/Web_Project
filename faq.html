@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>전공 선택 도우미 | FAQ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="faq.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-badge">Major</span>
+      <strong>Choice</strong>
+    </div>
+
+    <nav class="topnav">
+      <a class="toplink" href="index.html">Dashboard</a>
+      <a class="toplink" href="compare.html">Compare</a>
+      <a class="toplink" href="test.html">Test</a>
+      <a class="toplink" href="roadmap.html">Roadmap</a>
+      <a class="toplink" href="faq.html"><b>FAQ</b></a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="btn ghost" onclick="location.href='index.html'">Back</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-title">FAQ</div>
+
+      <a class="side-item" href="index.html">Home</a>
+      <a class="side-item" href="compare.html">전공 비교</a>
+      <a class="side-item" href="test.html">성향 테스트</a>
+      <a class="side-item" href="roadmap.html">로드맵</a>
+      <a class="side-item active" href="faq.html">FAQ</a>
+
+      <div class="side-section">
+        <div class="side-subtitle">Tip</div>
+        <p class="muted" style="margin:0 8px">
+          검색어를 입력하면<br />
+          관련 질문만 표시됩니다.
+        </p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="breadcrumb">Dashboard  ›  <b>FAQ</b></div>
+      <div class="page-head">
+        <h1>자주 묻는 질문</h1>
+        <div class="muted">
+          전공 선택과 관련된 질문을 확인해 보세요.
+        </div>
+      </div>
+
+      <!-- 검색 -->
+      <article class="card">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="예: 컴공, 보안, 취업, 수학…"
+          style="
+            width:100%;
+            padding:14px 16px;
+            border-radius:14px;
+            border:1px solid rgba(15,23,42,.12);
+            font-size:15px;
+          "
+        />
+      </article>
+
+      <!-- FAQ 목록 -->
+      <article class="card" style="margin-top:14px">
+        <div id="faqList"></div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

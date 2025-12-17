@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>전공 선택 도우미 | 로드맵</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="roadmap.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-badge">Major</span>
+      <strong>Choice</strong>
+    </div>
+
+    <nav class="topnav">
+      <a class="toplink" href="index.html">Dashboard</a>
+      <a class="toplink" href="compare.html">Compare</a>
+      <a class="toplink" href="test.html">Test</a>
+      <a class="toplink" href="roadmap.html"><b>Roadmap</b></a>
+      <a class="toplink" href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="btn ghost" onclick="location.href='index.html'">Back</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-title">로드맵</div>
+
+      <a class="side-item" href="index.html">Home</a>
+      <a class="side-item" href="compare.html">전공 비교</a>
+      <a class="side-item" href="test.html">성향 테스트</a>
+      <a class="side-item active" href="roadmap.html">로드맵</a>
+      <a class="side-item" href="faq.html">FAQ</a>
+
+      <div class="side-section">
+        <div class="side-subtitle">Guide</div>
+        <p class="muted" style="margin:0 8px">
+          목표 직무를 선택하면<br />
+          추천 학습 로드맵이 생성됩니다.
+        </p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="breadcrumb">Dashboard  ›  <b>Roadmap</b></div>
+      <div class="page-head">
+        <h1>진로 로드맵 생성</h1>
+        <div class="muted">
+          관심 있는 직무를 선택해 보세요.
+        </div>
+      </div>
+
+      <!-- 직무 선택 -->
+      <article class="card">
+        <div class="card-title">Step 1. 목표 직무 선택</div>
+        <div class="chip-row" id="jobButtons">
+          <button class="chip job-btn" data-job="backend">백엔드 개발자</button>
+          <button class="chip job-btn" data-job="frontend">프론트엔드 개발자</button>
+          <button class="chip job-btn" data-job="security">보안 관제/분석</button>
+          <button class="chip job-btn" data-job="consultant">보안 컨설턴트</button>
+        </div>
+      </article>
+
+      <!-- 로드맵 결과 -->
+      <article class="card" id="roadmapCard" style="display:none; margin-top:14px">
+        <div class="card-title">Step 2. 추천 학습 로드맵</div>
+
+        <div class="grid three" style="grid-template-columns: repeat(3, 1fr); gap:14px;">
+          <div class="card" style="box-shadow:none">
+            <div class="card-label">현재 학기</div>
+            <ul class="list" id="stepNow"></ul>
+          </div>
+
+          <div class="card" style="box-shadow:none">
+            <div class="card-label">방학</div>
+            <ul class="list" id="stepNext"></ul>
+          </div>
+
+          <div class="card" style="box-shadow:none">
+            <div class="card-label">다음 단계</div>
+            <ul class="list" id="stepLater"></ul>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
