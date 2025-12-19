@@ -45,18 +45,17 @@
       </div>
     </aside>
 
-    <section class="content">
+    <section class="content home">
       <div class="breadcrumb">Dashboard  ›  <b>My Result</b></div>
       <div class="page-head">
-        <h1>Analytics</h1>
-        <button class="btn primary" onclick="location.href='test.html'">Take Test</button>
+        <h1>나에게 어울리는 전공은?</h1>
       </div>
 
       <div class="grid kpi">
         <article class="card">
           <div class="card-label">최근 추천 전공</div>
           <div class="card-value" id="kpiMajor">-</div>
-          <div class="card-hint" id="kpiHint">테스트를 완료하면 여기에 표시됩니다.</div>
+          <div class="card-hint" id="kpiHint">마지막 테스트 결과가 여기에 표시됩니다.</div>
         </article>
 
         <article class="card">
@@ -104,15 +103,14 @@
       </div>
 
       <article class="card">
-        <div class="card-title">Sub Skill Evaluation</div>
-        <div class="chart" id="miniChart">
-          <!-- CSS bar chart: app.js에서 생성 -->
-        </div>
-      </article>
+  <div class="card-title">Sub Skill Evaluation</div>
+  <p class="muted" style="margin:0 0 12px">
+    성향 테스트 결과를 기반으로 전공 선택과 관련된 하위 역량을 시각화한 참고 지표입니다.
+  </p>
+  <div class="chart" id="miniChart"></div>
+</article>
+
     </section>
-
-    <section class="content home">
-
   </main>
 </body>
 </html>

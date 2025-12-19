@@ -10,19 +10,32 @@ function setRing(percent){
 }
 
 function renderChart(values){
+  const labels = ["개발·구현", "보안·분석", "균형도", "편향도", "보완 필요"];
+
   const el = document.getElementById("miniChart");
   if(!el) return;
   el.innerHTML = "";
+
   values.forEach((v, i) => {
     const bar = document.createElement("div");
     bar.className = "bar";
     bar.style.height = `${clamp(v, 0, 10) * 10}%`;
+
+// 숫자 표시
+    const val = document.createElement("div");
+    val.className = "val";
+    val.textContent = `${Number(v).toFixed(1)}%`;
+
+// 라벨 표시 
     const label = document.createElement("span");
-    label.textContent = `Skill ${i+1}`;
+    label.textContent = labels[i] ?? `Skill ${i+1}`;
+   
+    bar.appendChild(val);
     bar.appendChild(label);
     el.appendChild(bar);
   });
 }
+
 
 function loadResult(){
   try{
@@ -39,7 +52,14 @@ function renderDashboard(){
   if(!kpiMajor) return; // index.html에서만 렌더
 
   if(!result){
-    renderChart([3,6,5,7,4]);
+    const s1 = Math.round((ceScore/100)*10);                      // 개발·구현
+    const s2 = Math.round((secScore/100)*10);                     // 보안·분석
+    const s3 = Math.round(((ceScore + secScore)/200)*10);         // 균형도(평균)
+    const s4 = Math.round((Math.abs(ceScore - secScore)/100)*10); // 편향도(차이)
+    const s5 = Math.round(((100 - Math.min(ceScore, secScore))/100)*10); // 보완 필요
+
+    renderChart([s1, s2, s3, s4, s5]);
+
     return;
   }
 
@@ -48,8 +68,8 @@ function renderDashboard(){
   const fit = total ? Math.round((Math.max(ceScore, secScore) / total) * 100) : 0;
 
   document.getElementById("kpiMajor").textContent = major;
-  document.getElementById("kpiCE").textContent = `${ceScore}`;
-  document.getElementById("kpiSEC").textContent = `${secScore}`;
+  document.getElementById("kpiCE").textContent = `${ceScore}%`;
+  document.getElementById("kpiSEC").textContent = `${secScore}%`;
 
   document.getElementById("barCE").style.width = `${clamp(ceScore,0,100)}%`;
   document.getElementById("barSEC").style.width = `${clamp(secScore,0,100)}%`;
