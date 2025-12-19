@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="signup.js"></script>
+</head>
+<body>
+  <main class="layout">
+    <section class="content">
+      <h1>회원가입</h1>
+
+      <div class="card" style="max-width:420px">
+        <label>이메일</label>
+        <input type="email" id="signupEmail" required>
+
+        <label>비밀번호</label>
+        <input type="password" id="signupPassword" required>
+
+        <label>비밀번호 확인</label>
+        <input type="password" id="signupConfirm" required>
+
+        <button class="btn primary block" onclick="signup()">회원가입</button>
+        <p class="muted">이미 계정이 있나요? <a href="login.html">로그인</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
