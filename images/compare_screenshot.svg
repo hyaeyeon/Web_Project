@@ -1,0 +1,36 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Topbar -->
+  <rect width="800" height="60" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="20" y="35" font-family="Arial" font-weight="bold" font-size="20" fill="#333">Major Choice</text>
+
+  <!-- Sidebar -->
+  <rect y="60" width="200" height="540" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="10" y="130" width="180" height="40" rx="5" fill="#e2e8f0"/>
+  <text x="30" y="155" font-family="Arial" font-size="14" fill="#333">Compare</text>
+
+  <!-- Main Content Split View -->
+  <text x="240" y="100" font-family="Arial" font-size="24" font-weight="bold" fill="#333">전공 비교 분석</text>
+
+  <!-- Left Column -->
+  <rect x="240" y="130" width="250" height="400" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="260" y="150" width="210" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="280" y="175" font-family="Arial" font-size="14" fill="#333">컴퓨터공학과</text>
+  
+  <text x="260" y="220" font-family="Arial" font-size="16" font-weight="bold" fill="#333">커리큘럼</text>
+  <text x="260" y="250" font-family="Arial" font-size="12" fill="#666">- 자료구조</text>
+  <text x="260" y="270" font-family="Arial" font-size="12" fill="#666">- 운영체제</text>
+  <text x="260" y="290" font-family="Arial" font-size="12" fill="#666">- 알고리즘</text>
+
+  <!-- Right Column -->
+  <rect x="510" y="130" width="250" height="400" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="530" y="150" width="210" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="550" y="175" font-family="Arial" font-size="14" fill="#333">정보보호학과</text>
+
+  <text x="530" y="220" font-family="Arial" font-size="16" font-weight="bold" fill="#333">커리큘럼</text>
+  <text x="530" y="250" font-family="Arial" font-size="12" fill="#666">- 암호학</text>
+  <text x="530" y="270" font-family="Arial" font-size="12" fill="#666">- 네트워크 보안</text>
+  <text x="530" y="290" font-family="Arial" font-size="12" fill="#666">- 모의해킹</text>
+</svg>

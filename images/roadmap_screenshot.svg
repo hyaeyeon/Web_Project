@@ -1,0 +1,37 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Topbar -->
+  <rect width="800" height="60" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="20" y="35" font-family="Arial" font-weight="bold" font-size="20" fill="#333">Major Choice</text>
+
+  <!-- Sidebar -->
+  <rect y="60" width="200" height="540" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="10" y="210" width="180" height="40" rx="5" fill="#e2e8f0"/>
+  <text x="30" y="235" font-family="Arial" font-size="14" fill="#333">Roadmap</text>
+
+  <!-- Main Content -->
+  <text x="240" y="100" font-family="Arial" font-size="24" font-weight="bold" fill="#333">학습 로드맵</text>
+
+  <!-- Timeline Line -->
+  <line x1="300" y1="150" x2="300" y2="500" stroke="#cbd5e1" stroke-width="4"/>
+
+  <!-- Node 1 -->
+  <circle cx="300" cy="180" r="10" fill="#3b82f6"/>
+  <rect x="340" y="160" width="300" height="60" rx="5" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="360" y="185" font-family="Arial" font-size="14" font-weight="bold" fill="#333">1학년: 기초 다지기</text>
+  <text x="360" y="205" font-family="Arial" font-size="12" fill="#666">C언어, 파이썬 기초, 대학수학</text>
+
+  <!-- Node 2 -->
+  <circle cx="300" cy="280" r="10" fill="#3b82f6"/>
+  <rect x="340" y="260" width="300" height="60" rx="5" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="360" y="285" font-family="Arial" font-size="14" font-weight="bold" fill="#333">2학년: 전공 심화</text>
+  <text x="360" y="305" font-family="Arial" font-size="12" fill="#666">자료구조, 알고리즘, 객체지향</text>
+
+  <!-- Node 3 -->
+  <circle cx="300" cy="380" r="10" fill="#94a3b8"/>
+  <rect x="340" y="360" width="300" height="60" rx="5" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="360" y="385" font-family="Arial" font-size="14" font-weight="bold" fill="#333">3학년: 응용 및 프로젝트</text>
+  <text x="360" y="405" font-family="Arial" font-size="12" fill="#666">웹프로그래밍, 데이터베이스</text>
+</svg>
