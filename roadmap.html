@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>전공 선택 도우미 | 로드맵</title>
+  <title>전공 선택 도우미 | Roadmap</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="roadmap.js"></script>
 </head>
-<body>
+
+<body class="page-roadmap">
+  <!-- Topbar: 기존 UI 유지 -->
   <header class="topbar">
     <div class="brand">
       <span class="brand-badge">Major</span>
@@ -15,21 +16,22 @@
     </div>
 
     <nav class="topnav">
-      <a class="toplink" href="index.html">Dashboard</a>
       <a class="toplink" href="compare.html">Compare</a>
       <a class="toplink" href="test.html">Test</a>
-      <a class="toplink" href="roadmap.html"><b>Roadmap</b></a>
+      <a class="toplink" href="roadmap.html">Roadmap</a>
       <a class="toplink" href="faq.html">FAQ</a>
     </nav>
 
     <div class="top-actions">
-      <button class="btn ghost" onclick="location.href='index.html'">Back</button>
+      <button class="btn ghost" id="btnReset">Reset</button>
+      <button class="btn primary">Sign in</button>
     </div>
   </header>
 
   <main class="layout">
+    <!-- Sidebar: 기존 UI 유지 -->
     <aside class="sidebar">
-      <div class="side-title">로드맵</div>
+      <div class="side-title">Dashboard</div>
 
       <a class="side-item" href="index.html">Home</a>
       <a class="side-item" href="compare.html">전공 비교</a>
@@ -38,56 +40,174 @@
       <a class="side-item" href="faq.html">FAQ</a>
 
       <div class="side-section">
-        <div class="side-subtitle">Guide</div>
-        <p class="muted" style="margin:0 8px">
-          목표 직무를 선택하면<br />
-          추천 학습 로드맵이 생성됩니다.
-        </p>
+        <div class="side-subtitle">Quick Start</div>
+        <button class="btn block" onclick="location.href='test.html'">테스트 시작</button>
+        <button class="btn block ghost" onclick="location.href='compare.html'">전공 비교 보기</button>
       </div>
     </aside>
 
+    <!-- Content -->
     <section class="content">
       <div class="breadcrumb">Dashboard  ›  <b>Roadmap</b></div>
       <div class="page-head">
-        <h1>진로 로드맵 생성</h1>
-        <div class="muted">
-          관심 있는 직무를 선택해 보세요.
-        </div>
+        <h1>학년별 로드맵</h1>
+        <button class="btn primary" onclick="location.href='test.html'">내 결과로 보기</button>
       </div>
 
-      <!-- 직무 선택 -->
       <article class="card">
-        <div class="card-title">Step 1. 목표 직무 선택</div>
-        <div class="chip-row" id="jobButtons">
-          <button class="chip job-btn" data-job="backend">백엔드 개발자</button>
-          <button class="chip job-btn" data-job="frontend">프론트엔드 개발자</button>
-          <button class="chip job-btn" data-job="security">보안 관제/분석</button>
-          <button class="chip job-btn" data-job="consultant">보안 컨설턴트</button>
-        </div>
+        <div class="card-title">How to use</div>
+        <p class="muted" style="margin:0">
+          학년(또는 단계)별로 접기/펼치기를 하며 확인하세요. 한세대학교의 컴퓨터공학과와 융합보안학과를 기준으로 정리되어 있는 로드맵입니다. 
+        </p>
       </article>
 
-      <!-- 로드맵 결과 -->
-      <article class="card" id="roadmapCard" style="display:none; margin-top:14px">
-        <div class="card-title">Step 2. 추천 학습 로드맵</div>
+      <div class="grid two compare-wide" style="margin-top:18px">
+        <!-- 컴퓨터공학과 -->
+        <article class="card">
+          <div class="card-title">💻 컴퓨터공학과 로드맵</div>
+          <p class="muted" style="margin:0 0 10px">
+            시스템·소프트웨어 전반의 구조를 이해하고, 구현 역량(코드/프로젝트/협업)을 강화하는 흐름입니다.
+          </p>
 
-        <div class="grid three" style="grid-template-columns: repeat(3, 1fr); gap:14px;">
-          <div class="card" style="box-shadow:none">
-            <div class="card-label">현재 학기</div>
-            <ul class="list" id="stepNow"></ul>
+          <button class="acc-q">1학년 · 기초 역량 형성</button>
+          <div class="acc-a">
+            <p class="muted" style="margin:0 0 10px"><b>핵심 키워드</b> · 기초 프로그래밍 · 논리적 사고 · 전산 기초</p>
+            <ul class="list">
+              <li>진로탐색: IT학부 전공탐색 세미나</li>
+              <li>프로그래밍 기초(C/Python): 문법, 함수, 자료형, 디버깅 습관</li>
+              <li>문제 해결 사고: 작은 문제로 쪼개기, 조건/반복 구조 설계</li>
+              <li>컴퓨터 구조·운영체제 맛보기: 컴퓨터개론, CPU/메모리/프로세스 기본 개념</li>
+              <li><b>추천 준비</b>: Git/GitHub로 버전관리, 간단한 콘솔 미니프로그램 2~3개</li>
+            </ul>
           </div>
 
-          <div class="card" style="box-shadow:none">
-            <div class="card-label">방학</div>
-            <ul class="list" id="stepNext"></ul>
+          <button class="acc-q">2학년 · 전공 핵심 과목 진입</button>
+          <div class="acc-a">
+            <p class="muted" style="margin:0 0 10px"><b>핵심 키워드</b> · 자료구조 · 객체지향 · DB · 네트워크 기초</p>
+            <ul class="list">
+              <li>자료구조 및 알고리즘: 스택/큐/리스트/트리/해시의 쓰임과 구현 감각</li>
+              <li>객체지향(Java/C++): 클래스 설계, 캡슐화/상속/다형성 이해</li>
+              <li>데이터베이스(SQL), 데이터 통신: 정규화 개념, CRUD, 간단한 스키마 설계</li>
+              <li>네트워크 기초: TCP/IP, HTTP, 요청-응답 흐름 이해</li>
+              <li>인공지능 기초, 인공지능 프로그래밍</li>
+              <li><b>추천 준비</b>: 작은 CRUD 웹/콘솔 프로젝트 1개, SQL 실습(SELECT/JOIN)</li>
+            </ul>
           </div>
 
-          <div class="card" style="box-shadow:none">
-            <div class="card-label">다음 단계</div>
-            <ul class="list" id="stepLater"></ul>
+          <button class="acc-q">3학년 · 응용 및 심화</button>
+          <div class="acc-a">
+            <p class="muted" style="margin:0 0 10px"><b>핵심 키워드</b> · 웹/서버 · 알고리즘 심화 · 협업</p>
+            <ul class="list">
+              <li>웹/서버: 프레임워크 기반 개발 흐름(라우팅, API, 인증 개념)</li>
+              <li>알고리즘: 시간복잡도/공간복잡도, 탐색/정렬/DP 기초</li>
+              <li>협업: 이슈 관리, 브랜치 전략, 코드 리뷰 경험</li>
+              <li>캡스톤디자인</li>
+              <li><b>추천 준비</b>: 팀 프로젝트 1회 이상, 해커톤/인턴십/동아리 활동</li>
+            </ul>
           </div>
-        </div>
+
+          <button class="acc-q">4학년 · 진로 특화 및 취업 준비</button>
+          <div class="acc-a">
+            <p class="muted" style="margin:0 0 10px"><b>핵심 키워드</b> · 포트폴리오 · 실무 역량 · 면접 준비</p>
+            <ul class="list">
+              <li>졸업 프로젝트: 기획→구현→발표까지 문서화/시연 완성</li>
+              <li>취창업세미나</li>
+              <li>관심 분야 특화: 백엔드/프론트/데이터/AI 등 선택과 집중</li>
+              <li>면접 대비: 프로젝트 설명, CS 기초(네트워크/OS/DB) 정리</li>
+              <li><b>추천 준비</b>: 포트폴리오 웹페이지/README 정비, 코딩테스트 루틴</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 융합보안학과 -->
+        <article class="card">
+          <div class="card-title">🔐 융합보안학과 로드맵</div>
+          <p class="muted" style="margin:0 0 10px">
+            시스템/네트워크의 동작 원리를 이해하고, 위협·취약점·대응의 관점을 단계적으로 확장하는 흐름입니다.
+          </p>
+
+          <button class="acc-q">1학년 · 보안 및 IT 기초</button>
+          <div class="acc-a">
+            <p class="muted" style="margin:0 0 10px"><b>핵심 키워드</b> · 보안 개요 · 네트워크 기초 · 윤리</p>
+            <ul class="list">
+              <li>전공탐색: IT학부 전공탐색 세미나</li>
+              <li>융합보안개론: 기밀성/무결성/가용성(CIA)와 위협 모델</li>
+              <li>네트워크 기초: IP/포트/프로토콜, HTTP 요청-응답 이해</li>
+              <li>프로그래밍 기초: 입력 검증, 파일 처리 등 기본 구현 역량</li>
+              <li><b>추천 준비</b>: 리눅스 기본 명령어, 보안 용어 노트 정리</li>
+            </ul>
+          </div>
+
+          <button class="acc-q">2학년 · 보안 기술 기초</button>
+          <div class="acc-a">
+            <p class="muted" style="margin:0 0 10px"><b>핵심 키워드</b> · 시스템 보안 · 네트워크 보안 · 암호 기초</p>
+            <ul class="list">
+              <li>시스템 보안: 계정/권한, 프로세스/메모리 기본 개념</li>
+              <li>네트워크 보안: 방화벽/IDS/IPS 개념, 트래픽 흐름 이해</li>
+              <li>암호 기초, 해킹과 보안: 해시/대칭/비대칭 개념과 사용 시나리오</li>
+              <li>리눅스 시스템</li>
+              <li>사이버범죄심리, 보안법제도 기초</li>
+              <li><b>추천 준비</b>: 로그를 읽는 습관, 간단한 보안 실습 환경 경험(개념 중심)</li>
+            </ul>
+          </div>
+
+          <button class="acc-q">3학년 · 분석 및 대응 역량 강화</button>
+          <div class="acc-a">
+            <p class="muted" style="margin:0 0 10px"><b>핵심 키워드</b> · 침해사고 대응 · 포렌식 기초 · 관제</p>
+            <ul class="list">
+              <li>침해사고 흐름: 탐지→분석→차단→복구→재발 방지 관점</li>
+              <li>포렌식 기초: 증거 보존, 타임라인/로그 기반 분석 개념</li>
+              <li>보안 관제: 알림 분석, 오탐/정탐 구분의 기본 프레임</li>
+              <li>과학기술범죄과학, 시큐어 코딩</li>
+              <li><b>추천 준비</b>: CTF(초급)로 사고력 훈련, 팀 프로젝트로 보고서 작성 경험</li>
+            </ul>
+          </div>
+
+          <button class="acc-q">4학년 · 분야 특화 및 취업 준비</button>
+          <div class="acc-a">
+            <p class="muted" style="margin:0 0 10px"><b>핵심 키워드</b> · 전문 분야 선택 · 포트폴리오 · 자격 준비</p>
+            <ul class="list">
+              <li>세부 분야 선택: 관제/SOC, 모의해킹, 포렌식, 컨설팅 등</li>
+              <li>졸업 프로젝트: 보안 요구사항을 반영한 설계/구현/발표</li>
+              <li>자격 준비: 학부 수준에서 가능한 범위의 목표 설정</li>
+              <li><b>추천 준비</b>: 케이스 스터디(사고 분석) 정리, 발표 자료/보고서 템플릿 구축</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <article class="card" style="margin-top:18px">
+        <div class="card-title">Tip</div>
+        <ul class="list">
+          <li><b>컴퓨터공학과</b>는 “구현 + 협업 + 구조 이해”가 핵심입니다. 프로젝트 결과물을 꾸준히 쌓으세요.</li>
+          <li><b>융합보안학과</b>는 “원리 이해 + 분석 관점 + 대응 흐름”이 핵심입니다. 로그/사례 기반으로 정리해보세요.</li>
+          <li>로드맵은 “정답”이 아니라 “방향”입니다. 본인의 흥미와 강점을 기준으로 조정하면 가장 좋습니다.</li>
+        </ul>
       </article>
     </section>
   </main>
+
+  <script>
+    // Reset: 홈과 동일하게 결과(저장값) 초기화
+    const STORAGE_KEY = "major_helper_result_v1";
+    const btnReset = document.getElementById("btnReset");
+    if(btnReset){
+      btnReset.addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+        // 새로고침 없이도 되지만, 사용자에게 확실히 보여주기 위해 reload 유지
+        location.reload();
+      });
+    }
+
+    // Accordion: styles.css의 .acc-q / .acc-a 스타일을 그대로 활용
+    document.querySelectorAll(".acc-q").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("open");
+        const answer = btn.nextElementSibling;
+        if(!answer) return;
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

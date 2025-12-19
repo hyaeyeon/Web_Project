@@ -40,7 +40,7 @@ function renderQuestions(){
       <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
         <div>
           <div class="muted" style="font-weight:800; font-size:12px; letter-spacing:.2px;">
-            Q${idx+1} · ${q.type === "CE" ? "컴공 성향" : "보안 성향"}
+            Q${idx+1}
           </div>
           <div style="font-weight:850; margin-top:6px; line-height:1.35;">${q.text}</div>
         </div>
